@@ -1,0 +1,32 @@
+# Lux Exchange
+
+> Decentralized exchange for trading, liquidity pools, and token swaps on Lux Network.
+
+## About
+Lux Exchange is a decentralized exchange (DEX) built on Lux Network. It provides token swaps, liquidity pools, limit orders, and advanced trading features with sub-second settlement. The exchange leverages Lux Network's high throughput and post-quantum security for fast, secure, and low-cost trading.
+
+## Key Features
+- Instant token swaps with minimal slippage
+- Automated market maker (AMM) liquidity pools
+- Limit orders and advanced order types
+- Sub-second trade settlement
+- Low transaction fees on Lux Network
+- Cross-chain token trading via B-Chain bridge
+- Liquidity provider rewards and fee sharing
+- Portfolio tracking and trade history
+- Post-quantum secure transactions
+- No KYC required for decentralized trading
+
+## Links
+- [Website](https://lux.exchange)
+- [Lux Network](https://lux.network)
+- [Documentation](https://docs.lux.network/exchange)
+- [Analytics](https://lux.exchange/analytics)
+- [GitHub](https://github.com/luxfi)
+
+## API
+- Swap API: https://api.lux.exchange
+- Docs: https://docs.lux.network/exchange/api
+
+## Contact
+- Support: support@lux.network
