@@ -33,6 +33,33 @@ const stats = [
   { label: 'Supported Tokens', value: '1000+' },
 ]
 
+const steps = [
+  {
+    step: '01',
+    title: 'Connect Wallet',
+    description: 'Connect your preferred Web3 wallet securely',
+  },
+  {
+    step: '02',
+    title: 'Select Tokens',
+    description: 'Choose the tokens you want to swap',
+  },
+  {
+    step: '03',
+    title: 'Execute Trade',
+    description: 'Confirm and execute at the best available price',
+  },
+]
+
+const chains = [
+  { name: 'Lux', letter: 'L' },
+  { name: 'Ethereum', letter: 'E' },
+  { name: 'Arbitrum', letter: 'A' },
+  { name: 'Base', letter: 'B' },
+  { name: 'Polygon', letter: 'P' },
+  { name: 'BSC', letter: 'B' },
+]
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-white font-sans">
@@ -44,6 +71,7 @@ export default function Page() {
           </Link>
           <div className="flex gap-6 text-sm">
             <Link href="https://lux.network" className="hover:text-gray-300 transition-colors">Network</Link>
+            <Link href="https://docs.lux.network/exchange" className="hover:text-gray-300 transition-colors">Docs</Link>
             <Link href="https://app.lux.exchange" className="hover:text-gray-300 transition-colors">Trade</Link>
           </div>
         </nav>
@@ -51,43 +79,43 @@ export default function Page() {
 
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 text-center">
-        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mb-8">
+        <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center mb-8">
           <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
           </svg>
         </div>
-        <p className="text-base text-gray-400 mb-4">
-          Trade any asset, anywhere
+        <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
+          Decentralized Multi-Chain Trading
         </p>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
           LUX EXCHANGE
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl">
-          The decentralized exchange with deep liquidity and the best prices
+        <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl">
+          Trade any token across multiple chains with deep liquidity, best prices, and full self-custody
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="https://app.lux.exchange"
             className="px-8 py-3 bg-white text-black rounded-md hover:bg-gray-200 transition-colors font-medium"
           >
-            Start Trading
+            Launch App
           </Link>
           <Link
             href="https://docs.lux.network/exchange"
-            className="px-8 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors border border-white/10"
+            className="px-8 py-3 bg-white/5 border border-white/10 backdrop-blur-sm text-white rounded-md hover:bg-white/10 transition-colors"
           >
-            Documentation
+            Read Docs
           </Link>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 px-6 border-y border-white/10">
+      {/* Stats Bar */}
+      <section className="py-16 px-6 border-y border-white/10 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">{stat.value}</p>
+                <p className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</p>
                 <p className="text-gray-400 text-sm">{stat.label}</p>
               </div>
             ))}
@@ -95,22 +123,25 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-24 px-6 bg-gray-900/50">
+      {/* Features 2x2 Grid */}
+      <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Trade Smarter</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Trade Smarter</h2>
+          <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+            Built for traders who demand the best execution and complete control
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="bg-black/50 border border-white/10 rounded-xl p-8 hover:border-white/20 transition-colors"
+                className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-8 hover:border-white/20 transition-colors"
               >
-                <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-6">
-                  <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={feature.icon} />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
               </div>
             ))}
@@ -118,52 +149,212 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Supported Chains */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Multi-Chain Trading</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
-            Trade seamlessly across multiple chains with unified liquidity
+      {/* How It Works */}
+      <section className="py-24 px-6 border-y border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">How It Works</h2>
+          <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+            Start trading in three simple steps
           </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            {['Lux', 'Ethereum', 'Arbitrum', 'Base', 'Polygon', 'BSC'].map((chain) => (
-              <div key={chain} className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-full">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-red-500" />
-                <span className="font-medium">{chain}</span>
+          <div className="grid md:grid-cols-3 gap-8">
+            {steps.map((item, index) => (
+              <div key={item.step} className="text-center">
+                <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">{item.step}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+                <p className="text-gray-400">{item.description}</p>
+                {index < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-8 left-full w-full h-px bg-white/10" />
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Multi-Chain */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Multi-Chain Trading</h2>
+          <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
+            Trade seamlessly across multiple chains with unified liquidity and optimal routing
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            {chains.map((chain) => (
+              <div
+                key={chain.name}
+                className="flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 backdrop-blur-sm rounded-full hover:border-white/20 transition-colors"
+              >
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <span className="text-sm font-bold text-white">{chain.letter}</span>
+                </div>
+                <span className="font-medium text-white">{chain.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Liquidity Section */}
+      <section className="py-24 px-6 border-y border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Deep Liquidity Aggregation</h2>
+              <p className="text-gray-400 mb-6">
+                Lux Exchange aggregates liquidity from multiple DEXs and liquidity pools across chains
+                to ensure you always get the best execution price for your trades.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3 text-gray-400">
+                  <div className="w-2 h-2 bg-white rounded-full" />
+                  Cross-chain liquidity aggregation
+                </li>
+                <li className="flex items-center gap-3 text-gray-400">
+                  <div className="w-2 h-2 bg-white rounded-full" />
+                  Smart order routing for optimal prices
+                </li>
+                <li className="flex items-center gap-3 text-gray-400">
+                  <div className="w-2 h-2 bg-white rounded-full" />
+                  Minimal slippage on large orders
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-gray-400">Total Liquidity</span>
+                  <span className="text-white font-bold">$500M+</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-gray-400">DEXs Integrated</span>
+                  <span className="text-white font-bold">50+</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-gray-400">Avg. Execution Time</span>
+                  <span className="text-white font-bold">&lt;2s</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-gray-400">Price Improvement</span>
+                  <span className="text-white font-bold">0.5%+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Security First</h2>
+          <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
+            Your assets remain in your wallet until the moment of trade execution.
+            No deposits, no custody risk, no counterparty exposure.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2 text-white">Non-Custodial</h3>
+              <p className="text-gray-400 text-sm">You control your keys and assets at all times</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2 text-white">Audited</h3>
+              <p className="text-gray-400 text-sm">Smart contracts audited by leading security firms</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold mb-2 text-white">Transparent</h3>
+              <p className="text-gray-400 text-sm">Open source and verifiable on-chain</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-24 px-6 bg-gradient-to-b from-gray-900/50 to-black">
+      <section className="py-24 px-6 border-t border-white/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Trade?</h2>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-400 mb-10 max-w-2xl mx-auto">
             Connect your wallet and start trading in seconds.
             No registration, no KYC, no limits.
           </p>
-          <Link
-            href="https://app.lux.exchange"
-            className="inline-block px-8 py-4 bg-white text-black rounded-md hover:bg-gray-200 transition-colors font-medium"
-          >
-            Launch App
-          </Link>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="https://app.lux.exchange"
+              className="px-8 py-4 bg-white text-black rounded-md hover:bg-gray-200 transition-colors font-medium"
+            >
+              Launch App
+            </Link>
+            <Link
+              href="https://docs.lux.network/exchange"
+              className="px-8 py-4 bg-white/5 border border-white/10 backdrop-blur-sm text-white rounded-md hover:bg-white/10 transition-colors"
+            >
+              View Documentation
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Lux Exchange. All rights reserved.
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <div>
+              <h3 className="text-lg font-bold mb-4 text-white">LUX Exchange</h3>
+              <p className="text-gray-400 text-sm">
+                Decentralized multi-chain trading with deep liquidity and the best prices.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-medium mb-4 text-white">Products</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="https://app.lux.exchange" className="hover:text-white transition-colors">Exchange</Link></li>
+                <li><Link href="https://lux.market" className="hover:text-white transition-colors">Market</Link></li>
+                <li><Link href="https://bridge.lux.network" className="hover:text-white transition-colors">Bridge</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-medium mb-4 text-white">Resources</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="https://docs.lux.network" className="hover:text-white transition-colors">Documentation</Link></li>
+                <li><Link href="https://github.com/luxfi" className="hover:text-white transition-colors">GitHub</Link></li>
+                <li><Link href="https://lux.network/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-medium mb-4 text-white">Ecosystem</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="https://lux.network" className="hover:text-white transition-colors">Network</Link></li>
+                <li><Link href="https://lux.fund" className="hover:text-white transition-colors">Fund</Link></li>
+                <li><Link href="https://lux.partners" className="hover:text-white transition-colors">Partners</Link></li>
+              </ul>
+            </div>
           </div>
-          <div className="flex gap-6 text-sm text-gray-400">
-            <Link href="https://lux.network" className="hover:text-white transition-colors">Network</Link>
-            <Link href="https://lux.market" className="hover:text-white transition-colors">Market</Link>
-            <Link href="https://lux.fund" className="hover:text-white transition-colors">Fund</Link>
-            <Link href="https://lux.partners" className="hover:text-white transition-colors">Partners</Link>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/10">
+            <div className="text-sm text-gray-400">
+              © {new Date().getFullYear()} Lux Partners. All rights reserved.
+            </div>
+            <div className="flex gap-6 text-sm text-gray-400">
+              <Link href="https://twitter.com/luxfi" className="hover:text-white transition-colors">Twitter</Link>
+              <Link href="https://discord.gg/luxfi" className="hover:text-white transition-colors">Discord</Link>
+              <Link href="https://t.me/luxfi" className="hover:text-white transition-colors">Telegram</Link>
+            </div>
           </div>
         </div>
       </footer>
