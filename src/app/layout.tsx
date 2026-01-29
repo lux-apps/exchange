@@ -76,7 +76,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${inter.className} bg-black text-white min-h-screen antialiased`}>
+      <body className={`${inter.className} bg-background text-foreground min-h-screen antialiased`}>
         {children}
       </body>
     </html>
