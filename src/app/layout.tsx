@@ -6,9 +6,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'LUX Exchange | Decentralized Multi-Chain Trading',
-  description: 'Trade any token across multiple chains with deep liquidity, best prices, and full self-custody. No registration, no KYC, no limits.',
-  keywords: ['DEX', 'decentralized exchange', 'crypto trading', 'multi-chain', 'DeFi', 'Lux', 'swap', 'liquidity'],
+  title: 'LUX Exchange | Native DEX with On-Chain Order Book and AMM',
+  description: 'Native DEX with on-chain order book and AMM. 1M+ orders/sec, 597ns latency, 50ms finality. Perpetuals, flash loans, and liquidity mining on D-Chain.',
+  keywords: ['DEX', 'decentralized exchange', 'order book', 'CLOB', 'AMM', 'perpetuals', 'DeFi', 'Lux', 'D-Chain', 'flash loans', 'liquidity mining'],
   authors: [{ name: 'Lux Partners' }],
   creator: 'Lux Partners',
   publisher: 'Lux Partners',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://lux.exchange',
     siteName: 'LUX Exchange',
-    title: 'LUX Exchange | Decentralized Multi-Chain Trading',
-    description: 'Trade any token across multiple chains with deep liquidity, best prices, and full self-custody. No registration, no KYC, no limits.',
+    title: 'LUX Exchange | Native DEX with On-Chain Order Book and AMM',
+    description: 'Native DEX with on-chain order book and AMM. 1M+ orders/sec, 597ns latency, 50ms finality. Perpetuals, flash loans, and liquidity mining on D-Chain.',
     images: [
       {
         url: '/og-image.png',
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@luxfi',
-    creator: '@luxfi',
-    title: 'LUX Exchange | Decentralized Multi-Chain Trading',
-    description: 'Trade any token across multiple chains with deep liquidity, best prices, and full self-custody.',
+    site: '@luxdefi',
+    creator: '@luxdefi',
+    title: 'LUX Exchange | Native DEX with On-Chain Order Book and AMM',
+    description: 'Native DEX on D-Chain. 1M+ orders/sec, 597ns latency, 50ms finality. Perpetuals, flash loans, liquidity mining.',
     images: ['/og-image.png'],
   },
   robots: {
